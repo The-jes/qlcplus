@@ -40,7 +40,12 @@ export class fader extends SingletonAction<dialSettings> {
     const settings = ev.payload.settings;
     let value: number;
 
-    if (settings.value == 0) {
+    //Toggle between 0 and 255
+    if (settings.value == 255) {
+      value = 0;
+    } else if (settings.value == 0) {
+      value = 255;
+    } else if (settings.value > 128) {
       value = 255;
     } else value = 0;
     //send the data to QLC+
