@@ -1,0 +1,62 @@
+{
+  "Name": "Qlc+",
+  "Version": "0.1.0.0",
+  "Author": "Jesko Stolp",
+  "Actions": [
+    {
+      "Name": "Button",
+      "UUID": "de.jesko-stolp.qlcplusonsd.button",
+      "Icon": "imgs/actions/button/icon",
+      "Tooltip": "Press a Button in the Virtual Console",
+      "PropertyInspectorPath": "ui/button.html",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/button/icon",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Fader",
+      "UUID": "de.jesko-stolp.qlcplusonsd.fader",
+      "Icon": "imgs/actions/knob/icon",
+      "Tooltip": "Control a fader in the Virtual Console",
+      "PropertyInspectorPath": "ui/fader.html",
+      "Controllers": ["Encoder"],
+      "Encoder": {
+        "layout": "$B1"
+      },
+      "States": [
+        {
+          "Image": "imgs/plugin/qlcplus",
+          "TitleAlignment": "middle"
+        }
+      ]
+    }
+  ],
+  "Category": "Qlc+",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "CodePath": "bin/plugin.js",
+  "Description": "Execute Qlc+ Buttons and Faders from  your StreamDeck",
+  "Icon": "imgs/plugin/marketplace",
+  "SDKVersion": 3,
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "UUID": "de.jesko-stolp.qlcplus"
+}
